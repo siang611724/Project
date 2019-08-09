@@ -214,7 +214,6 @@ Game.prototype.wrongSound = function(){
         this.showResult("You Wrong.")
         this.blocks.playSound("wrong")
         $(".block").addClass("error")
-        $(".result").css("color","#ff6d6d")
     },100)
 }
 // 初始畫面 點下開始按鈕進入倒數並開始遊戲
