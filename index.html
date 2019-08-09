@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./project.css">
+    
+    <title>Memory Animals Game</title>
+</head>
+<body>
+    <div class="infos">
+        <h1>Memory Animals</h1>
+        <h3 class="status">-</h3>
+        <h3 class="point">Score: 0</h3>
+        <h3 class="result"></h3>
+    </div>
+    <div class="gameInfo">
+        <h2>Start Game</h2>
+        <button class="btn btn-outline-dark" onclick="game.clickToStart()">開始遊戲</button>
+        <p>遊戲規則：<br>每一關會依序播放不同動物的聲音，按照播放順序去點選對應動物的圖片，<br>答對得分進入下一關，答錯的話則會扣分並倒退一關。<br>玩到後面難度越高喔！</p>
+    </div>
+    <div class="end"></div>
+    <div class="blocks">
+        <div class="row">
+            <div class="block block1" onclick="game.sendUserInput('1')"></div>
+            <div class="block block2" onclick="game.sendUserInput('2')"></div>
+            <div class="block block5" onclick="game.sendUserInput('5')"></div>
+            <div class="block block7" onclick="game.sendUserInput('7')"></div>
+        </div>
+        <div class="row">
+            <div class="block block3" onclick="game.sendUserInput('3')"></div>
+            <div class="block block4" onclick="game.sendUserInput('4')"></div>
+            <div class="block block6" onclick="game.sendUserInput('6')"></div>
+            <div class="block block8" onclick="game.sendUserInput('8')"></div>
+        </div>
+        <div class="inputStatus"></div>
+    </div>
+    <script src="./project.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Blinker:700&display=swap');
+html, body {
+  font-family: 'Blinker', sans-serif,'微軟正黑體';
+  background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("./img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.infos {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  visibility: hidden;
+  transition: 0.5s;
+  color: #343835;
+  z-index: 0;
+}
+h1 {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+h3 {
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: 500;
+}
+.point {
+  font-size: 40px;
+}
+.result {
+  font-size: 80px;
+  color: #6c8ec8;
+}
+
+.blocks {
+  /* color: black; */
+  visibility: hidden; 
+  transition: 0.5s;
+  z-index: 100;
+}
+.row {
+  display: flex;
+}
+.block {
+  width: 200px;
+  height: 200px;
+  border: solid 1px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  margin: 20px;
+  border-radius: 50%;
+}
+.block:hover {
+  transform: translate(0px,-10px);
+}
+.blocks .block:active, .blocks .block.active {
+  background-color: #fff;
+  transition: 0s;
+  /* color: black; */
+  transform: scale(1.2)
+}
+.block1 {
+  background-image: url("./img/dog.png");
+  background-size: cover;
+  border: solid 2px #ff6d6d;
+}
+.block1:hover {
+  box-shadow: 2px 2px 10px #ff6d6d;
+}
+/* .blocks .block.block1:active, .blocks .block.block1.active {
+  transform: scale(1.2)
+} */
+.block2 {
+  background-image: url("./img/elephant.png");
+  background-size: cover;
+  border: solid 2px #c9c3c9;
+}
+.block2:hover {
+  box-shadow: 2px 2px 10px #c9c3c9;
+}
+/* .blocks .block.block2:active, .blocks .block.block2.active {
+  transform: scale(1.2)
+} */
+.block3 {
+  background-image: url("./img/sheep.png");
+  background-size: cover;
+  border: solid 2px #6c8ec8;
+}
+.block3:hover {
+  box-shadow: 2px 2px 10px #6c8ec8;
+}
+/* .blocks .block.block3:active, .blocks .block.block3.active {
+  transform: scale(1.2)
+} */
+.block4 {
+  background-image: url("./img/cow.jpg");
+  background-size: cover;
+  border: solid 2px #59c18d;
+}
+.block4:hover {
+  box-shadow: 2px 2px 10px #59c18d;
+}
+/* .blocks .block.block4:active, .blocks .block.block4.active {
+  transform: scale(1.2);
+} */
+.block5 {
+  background-image: url("./img/pikachu.jpg");
+  background-size: cover;
+  border: solid 2px #ffcb43;
+}
+.block5:hover {
+  box-shadow: 2px 2px 10px #ffcb43;
+}
+/* .blocks .block.block5:active, .blocks .block.block5.active {
+  transform: scale(1.2);
+} */
+.block6 {
+  background-image: url("./img/cat.png");
+  background-size: cover;
+  border: solid 2px #fc751b;
+}
+.block6:hover {
+  box-shadow: 2px 2px 10px #fc751b;
+}
+/* .blocks .block.block6:active, .blocks .block.block6.active {
+  transform: scale(1.2);
+} */
+.block7 {
+  background-image: url("./img/duck1.jpg");
+  background-size: cover;
+  border: solid 2px #47c6e6;
+}
+.block7:hover {
+  box-shadow: 2px 2px 10px #47c6e6;
+}
+/* .blocks .block.block7:active, .blocks .block.block7.active {
+  transform: scale(1.2);
+} */
+.block8 {
+  background-image: url("./img/lion.png");
+  background-size: cover;
+  border: solid 2px #0f8a08;
+}
+.block8:hover {
+  box-shadow: 2px 2px 10px #0f8a08;
+}
+/* .blocks .block.block8:active, .blocks .block.block8.active {
+  transform: scale(1.2);
+} */
+
+.block.bingo {
+  transform: scale(1.2);
+}
+.block.error {
+  opacity: 0;
+  transition: 0.2s
+}
+.inputStatus {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 20px;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 5px;
+  display: inline-block;
+  opacity: 0.5;
+  background-color: gray;
+}
+.circle.correct {
+  opacity: 1;
+}
+.inputStatus.proper .circle{
+  background-color: #6c8ec8;
+}
+.inputStatus.wrong .circle {
+  background-color: #ff6d6d;
+}
+
+.gameInfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h2 {
+  color: #343835;
+  font-size: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+.end {
+  opacity: 0;
+  position: absolute;
+  z-index: 101;
+  font-size: 70px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
